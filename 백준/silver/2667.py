@@ -2,13 +2,10 @@ from collections import deque
 n = int(input())
 graph = [list(map(int, input())) for _ in range(n)]
 visited = [[False] * n for _ in range(n)] 
-
 dy = [-1, 0, 1, 0]
 dx = [0, 1, 0, -1]
-answer = []
-
+queue = deque()
 def bfs(y, x, data):
-    queue = deque()
     visited[y][x] = True
     queue.append((y, x))
     cnt = 1
@@ -21,9 +18,9 @@ def bfs(y, x, data):
                 queue.append((ny, nx))
                 visited[ny][nx] = True
                 cnt += 1
+    
     return cnt
-
-
+answer = []
 for i in range(n):
     for j in range(n):
         if graph[i][j] != 0 and not visited[i][j]:
