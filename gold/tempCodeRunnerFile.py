@@ -1,9 +1,13 @@
-now_memory, now_cost = 0, 0
-# pos = 0
-# while now_memory < m:
-#     now_memory += info[pos][0]
-#     now_cost += info[pos][1]
-#     pos += 1
+n = int(input())
+l = sorted(list(map(int, input().split())))
+a, b, c = l[0], sum(l[:2]), sum(l[:3])
+if n == 1:
+    print(sum(l) - max(l))
+elif n == 2:
+    print(c * 4 + b * 4)
+else:
+    one_side = (n-2) * (n-1) * 4 + (n-2) ** 2
+    two_side = (n-1) * 4 + (n-2) * 4
+    three_side = 4
     
-
-# if now_memory - info[pos-1][0] + info[pos][0] >= m:
+    print(a * one_side + b * two_side + c * three_side)
