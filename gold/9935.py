@@ -1,14 +1,13 @@
-s = list(input())
-bomb = list(input())
-temp = []
-bomb_length = len(bomb)
-for i in range(len(s)):
-    if temp and temp[-1] == bomb[:-1]:
-        if temp[-(bomb_length-1):] + [s[i]] == bomb:
-            temp = temp[:-(bomb_length-1)]
-    else: temp.append(s[i])
-if not temp:
-    print('FRULA')
+s, bomb = input(), input()
+st = []
+
+for i in s:
+    st.append(i)
+    if st[-len(bomb):] == list(bomb):
+        for _ in range(len(bomb)):
+            st.pop()
+
+if not st:
+    print("FRULA")        
 else:
-    print(''.join(temp))
-    
+    print(''.join(st))
