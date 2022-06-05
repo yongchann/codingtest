@@ -1,0 +1,1 @@
+print(sum(list(map(lambda x : x**5, list(map(int, list(input())))))))
