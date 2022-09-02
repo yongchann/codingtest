@@ -2,6 +2,6 @@ retry/
 untitled/
 .vscode/
 **/tempCodeRunnerFile
-.gitignore
-.DS_Store
+gitignore
+DS_Store
 vscode/
