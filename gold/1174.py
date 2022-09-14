@@ -11,7 +11,7 @@ def dfs(a):
     
 l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-for i in range(0, 10):
+for i in range(0, 10):2096.
     dfs(str(i))
     
 l = sorted(list(map(int, l)))

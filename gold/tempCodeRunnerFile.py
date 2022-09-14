@@ -1,2 +1,1 @@
-for i in dice:
-        print(i)
+sum(check(i) for i in range(n)))
