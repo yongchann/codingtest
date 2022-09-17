@@ -1,1 +1,1 @@
-sum(check(i) for i in range(n)))
+if q else 0)
